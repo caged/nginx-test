@@ -1,3 +1,18 @@
+### Running
+
+Edit your `/etc/hosts` file and add
+
+```
+127.0.0.1	nginx-test.local
+127.0.0.1	admin.nginx-test.local
+```
+
+```
+docker-compose up
+```
+
+### About
+
 How to use an nginx reverse proxy to serve a subdirectory in nextjs through a subdomain. For example, if you have a pages directory that is structured
 
 ```
