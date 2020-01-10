@@ -8,8 +8,8 @@ const Top = () => (
       <title>Top</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div>Hello from the Fetch root</div>
+    <div>Can't access me from admin.host./div>
   </div>
-)
-
-export default Top
+    )
+    
+    export default Top
