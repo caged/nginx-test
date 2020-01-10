@@ -1,6 +1,17 @@
 version: "3"
 services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf:/etc/nginx/vhost.d
+      - /var/run/docker.sock:/tmp/docker.sock:ro
   web:
     build: .
     ports:
       - "3000:3000"
+    environment:
+      - VIRTUAL_HOST=nginx-test.local
+    depends_on:
+      - nginx-proxy
